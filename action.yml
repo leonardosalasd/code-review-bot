@@ -1,4 +1,4 @@
-name: 'Gemini AI PR Reviewer'
+name: 'Pull Request AI Reviewer (Gemini)'
 description: 'Automated pull request code review powered by Google Gemini.'
 author: 'Leonardo Salas'
 
