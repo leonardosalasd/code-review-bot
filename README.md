@@ -108,6 +108,22 @@ The `dist/` directory is committed to the repo. This is required for JavaScript 
 
 Please use [conventional commits](https://www.conventionalcommits.org/) for your commit messages (`feat:`, `fix:`, `docs:`, etc.).
 
+## Limitations & Best Practices (AI Disclosure)
+
+This Action uses generative AI (Google Gemini) to review code. Please keep the following in mind:
+
+1. **AI is not perfect:** The bot may occasionally hallucinate, suggest suboptimal code, or miss critical bugs. It is designed to *assist* human reviewers, not replace them.
+2. **Context limits:** The bot reviews diffs. It does not have full context of your entire codebase, which may lead to suggestions that don't fit your overall architecture.
+3. **Security:** Do not rely solely on this bot for security audits. Always have a human review security-critical code.
+4. **Data Privacy:** The code diffs in your pull requests are sent to the Google Gemini API for processing. Ensure this complies with your organization's data policies.
+
+## Feedback & Issue Reporting
+
+We are committed to improving this AI tool. If you encounter errors, bugs, or if the bot generates improper, offensive, or undesired outputs, please report it:
+
+- **General Bugs/Feedback:** Open an issue in this repository.
+- **Security/Critical Issues:** Please follow the instructions in our [SECURITY.md](./SECURITY.md) or email **leonardo.salas01@outlook.com**.
+
 ## License
 
 [MIT](./LICENSE)
