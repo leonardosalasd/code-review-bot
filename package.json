@@ -1,0 +1,41 @@
+{
+  "name": "code-review-bot",
+  "version": "1.0.0",
+  "description": "AI-powered code review for your pull requests, using Google Gemini.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build src/index.ts --source-map --license licenses.txt",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write src/",
+    "format:check": "prettier --check src/"
+  },
+  "keywords": [
+    "github-action",
+    "code-review",
+    "gemini",
+    "ai",
+    "pull-request"
+  ],
+  "author": "Leonardo Salas",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0",
+    "@google/genai": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@vercel/ncc": "^0.38.3",
+    "eslint": "^9.0.0",
+    "@eslint/js": "^9.0.0",
+    "typescript-eslint": "^8.0.0",
+    "typescript": "^5.7.0",
+    "prettier": "^3.4.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.12.1"
+}
