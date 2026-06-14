@@ -1,4 +1,4 @@
-name: 'AI Code Review Bot'
+name: 'Gemini AI PR Reviewer'
 description: 'Automated pull request code review powered by Google Gemini.'
 author: 'Leonardo Salas'
 
