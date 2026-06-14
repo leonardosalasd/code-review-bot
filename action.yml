@@ -1,0 +1,39 @@
+name: 'AI Code Review Bot'
+description: 'Automated pull request code review powered by Google Gemini.'
+author: 'Leonardo Salas'
+
+inputs:
+  github-token:
+    description: 'GitHub token for API access. Use ${{ secrets.GITHUB_TOKEN }}.'
+    required: true
+  gemini-api-key:
+    description: 'Your Google Gemini API key.'
+    required: true
+  model:
+    description: 'Gemini model to use for reviews.'
+    required: false
+    default: 'gemini-2.0-flash'
+  language:
+    description: 'Language for review comments (e.g. "en", "es", "pt").'
+    required: false
+    default: 'en'
+  exclude-patterns:
+    description: 'Comma-separated glob patterns for files to skip (on top of defaults).'
+    required: false
+    default: ''
+
+outputs:
+  review-summary:
+    description: 'Summary of the review.'
+  comments-count:
+    description: 'Number of review comments posted.'
+  approval-status:
+    description: 'Review decision: APPROVE, REQUEST_CHANGES, or COMMENT.'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+
+branding:
+  icon: 'eye'
+  color: 'purple'
